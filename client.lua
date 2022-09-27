@@ -120,17 +120,15 @@ Citizen.CreateThread(function()
 
 	while true do
 		Citizen.Wait(5)
-		if PlayerData.job ~= nil then
-			local playerPed = PlayerPedId()
-			local coords    = GetEntityCoords(playerPed)
-			local dst = #(coords - jobCenter.pos3)
-			if dst < 3.0 then
-				DrawText3D(jobCenter.pos3, 'Press [~g~E~s~] to open the job center')
-				if dst < 2.0 then
-					if IsControlJustPressed(0, 38) then
-						OpenJobCenterMenu()
-						Citizen.Wait(1000)
-					end
+		local playerPed = PlayerPedId()
+		local coords    = GetEntityCoords(playerPed)
+		local dst = #(coords - jobCenter.pos3)
+		if dst < 3.0 then
+			DrawText3D(jobCenter.pos3, 'Press [~g~E~s~] to open the job center')
+			if dst < 2.0 then
+				if IsControlJustPressed(0, 38) then
+					OpenJobCenterMenu()
+					Citizen.Wait(1000)
 				end
 			end
 		end
