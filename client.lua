@@ -259,7 +259,6 @@ end
 
 function DrawText3D(x,y,z, text)
     local onScreen,_x,_y = GetScreenCoordFromWorldCoord(x,y,z)
-    local px,py,pz=table.unpack(GetGameplayCamCoords())
     SetTextScale(0.35, 0.35)
     SetTextFont(4)
     SetTextProportional(1)
