@@ -124,7 +124,7 @@ Citizen.CreateThread(function()
 		local coords    = GetEntityCoords(playerPed)
 		local dst = #(coords - jobCenter.pos3)
 		if dst < 3.0 then
-			DrawText3D(jobCenter.pos3, 'Press [~g~E~s~] to open the job center')
+			DrawText3D(jobCenter.pos3.x, jobCenter.pos3.y, jobCenter.pos3.z, 'Press [~g~E~s~] to open the job center')
 			if dst < 2.0 then
 				if IsControlJustPressed(0, 38) then
 					OpenJobCenterMenu()
