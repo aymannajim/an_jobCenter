@@ -1,5 +1,5 @@
 fx_version 'cerulean'
 games { 'rdr3', 'gta5' }
 description 'Job Center / Job Tutorials'
-author 'aymannajim' -- For support: https://discord.gg/f2Nbv9Ebf5
+author 'aymannajim' -- https://github.com/aymannajim
 client_script 'client.lua'
